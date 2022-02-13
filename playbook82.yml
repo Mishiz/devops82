@@ -28,7 +28,7 @@
   - name: Push WAR File to Control
     synchronize:
       mode: pull
-      src: rsync:/tmp/boxfuse/target/hello-1.0.war
+      src: rsync://10.129.0.10/tmp/boxfuse/target/hello-1.0.war
       dest: /tmp/ROOT.war
 
 
