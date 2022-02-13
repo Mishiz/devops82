@@ -40,7 +40,7 @@
   - name: Ensure tomcat is installed
     apt:
       name: tomcat=9
-      state: latest
+      state: present
 
 
 
