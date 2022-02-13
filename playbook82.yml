@@ -14,7 +14,7 @@
       state: latest
   - name: Clean tomcat dir
     file:
-      path: /var/lib/tomcat9/webapps
+      path: /var/lib/tomcat9/webapps/*
       state: absent
 
 
