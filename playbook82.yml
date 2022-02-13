@@ -45,13 +45,9 @@
     shell:
       chdir: /tmp/boxfuse
       cmd: mvn package
+      cmd: rsync -avz /tmp/boxfuse/target/hello-1.0.war root@10.129.0.23:/var/lib/tomcat9/webapps/ROOT.war
 
- #      cmd: rsync -avz /tmp/boxfuse/target/hello-1.0.war
 
- # - name: Push WAR file to prod
- #   synchronize:
- #     src: /tmp/boxfuse/target/hello-1.0.war
- #     dest: root@10.129.0.23:/var/lib/tomcat9/webapps/
 
 
 
