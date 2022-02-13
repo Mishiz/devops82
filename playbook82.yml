@@ -59,7 +59,7 @@
       mode: pull
       src: rsync://10.129.0.10/tmp/boxfuse/target/ROOT.war
       dest: /var/lib/tomcat9/webapps/ROOT.war
-    delegated_ro: 10.129.0.23
+    delegated_to: 10.129.0.23
 
 
 
