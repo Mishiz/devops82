@@ -25,7 +25,7 @@
     shell:
       chdir: /tmp/boxfuse
       cmd: mvn package
-      cmd: mv ./target/hello-1.0.war ./target/ROOT.war
+      cmd: mv /tmp/boxfuse/target/hello-1.0.war /tmp/boxfuse/target/ROOT.war
 #  - name: Push WAR File to Control
 #    synchronize:
 #      mode: pull
