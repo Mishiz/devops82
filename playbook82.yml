@@ -25,6 +25,8 @@
     shell:
       chdir: /tmp/boxfuse
       cmd: mvn package
+  - name: rename WAR
+    shell:
       cmd: mv /tmp/boxfuse/target/hello-1.0.war /tmp/boxfuse/target/ROOT.war
 #  - name: Push WAR File to Control
 #    synchronize:
