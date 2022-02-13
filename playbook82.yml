@@ -58,7 +58,7 @@
       mode: pull
       src: /tmp/boxfuse/target/ROOT.war
       dest: /var/lib/tomcat9/webapps/ROOT.war
-    delegate_to: 10.129.0.10
+    delegate_to: 127.0.0.1
 
 
 
