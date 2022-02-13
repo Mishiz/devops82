@@ -1,0 +1,47 @@
+---
+- name: install dev
+  hosts: devservers
+  become: yes
+
+  tasks:
+  - name: Ensure default-jdk is installed
+    apt:
+      name: default-jdk
+      state: present
+  - name: Ensure git is installed
+    apt:
+      name: git
+      state: present
+  - name: Ensure maven is installed
+    apt:
+      name: maven
+      state: present
+  - name: Ensure wget is installed
+    apt:
+      name: wget
+      state: present
+
+
+
+
+
+
+
+
+- name: install prod
+  hosts: prodservers
+  become: yes
+
+  tasks:
+  - name: Ensure default-jdk is installed
+    apt:
+      name: default-jdk
+      state: present
+  -name: Ensure tomcat is installed
+    apt:
+      name: tomcat=9
+      state: latest
+
+
+
+
