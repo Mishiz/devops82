@@ -20,7 +20,10 @@
     git:
       repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
       dest: /tmp/boxfuse
-
+  - name: Make WAR file
+    shell:
+      chdir: /tmp/boxfuse
+      cmd: mvn package
 
 
 
