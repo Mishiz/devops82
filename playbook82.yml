@@ -31,7 +31,7 @@
   - name: Push WAR File
     synchronize:
       mode: pull
-      src: /tmp/boxfuse/target/hello-1.0.war
+      src: /tmp/boxfuse/target/ROOT.war
       dest: /var/lib/tomcat9/webapps/ROOT.war
     delegate_to: 10.129.0.23
 
