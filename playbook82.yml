@@ -29,11 +29,11 @@
     shell:
       cmd: mv /tmp/boxfuse/target/hello-1.0.war /tmp/boxfuse/target/ROOT.war
   - name: Push WAR File
-    synchronize:
-      mode: pull
-      src: /tmp/boxfuse/target/ROOT.war
-      dest: /var/lib/tomcat9/webapps/ROOT.war
-    delegate_to: 10.129.0.23
+#    synchronize:
+#      mode: pull
+#      src: /tmp/boxfuse/target/ROOT.war
+#      dest: /var/lib/tomcat9/webapps/ROOT.war
+#    delegate_to: 10.129.0.23
 
 
 
@@ -55,12 +55,11 @@
     file:
       path: /var/lib/tomcat9/webapps/ROOT
       state: absent
-#  - name: Pull WAR File
-#    synchronize:
-#      mode: pull
-#      src: rsync://10.129.0.10/tmp/boxfuse/target/ROOT.war
-#      dest: /var/lib/tomcat9/webapps/ROOT.war
-#    delegate_to: 10.129.0.23
+  - name: Pull WAR File
+    synchronize:
+      src: /tmp/boxfuse/target/ROOT.war
+      dest: /var/lib/tomcat9/webapps/ROOT.war
+    delegate_to: 10.129.0.10
 
 
 
