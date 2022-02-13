@@ -37,7 +37,7 @@
     apt:
       name: default-jdk
       state: present
-  -name: Ensure tomcat is installed
+  - name: Ensure tomcat is installed
     apt:
       name: tomcat=9
       state: latest
