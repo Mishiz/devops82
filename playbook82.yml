@@ -26,8 +26,14 @@
       chdir: /tmp/boxfuse
       cmd: mvn package
   - name: rename WAR
-    shell:
-      cmd: mv /tmp/boxfuse/target/hello-1.0.war /tmp/boxfuse/target/ROOT.war
+    copy:
+      src: /tmp/boxfuse/target/hello-1.0.war
+      dest: /tmp/boxfuse/target/ROOT.war
+      remote_src: true
+  - name: rename WAR2
+    file:
+      path: /tmp/boxfuse/target/hello-1.0.war
+      state: absent
 
 
 
