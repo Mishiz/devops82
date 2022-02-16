@@ -23,8 +23,7 @@
       dest: /tmp/boxfuse
   - name: Make WAR file
     shell:
-      chdir: /tmp/boxfuse
-      cmd: mvn package
+      cmd: mvn -f /tmp/boxfuse/pom.xml package
   - name: rename WAR
     copy:
       src: /tmp/boxfuse/target/hello-1.0.war
